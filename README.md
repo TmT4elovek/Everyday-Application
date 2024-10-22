@@ -1,0 +1,4 @@
+<h1>Everyday Application</h1>
+This application will help you to organize your daily routine💼
+<h2>How can it helps you?</h2>
+With this application, you can make notes in the calendar, track the time and watch the weather forecast
