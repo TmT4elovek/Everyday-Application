@@ -10,7 +10,7 @@ class Weather(QMainWindow):
         # Load the UI file
         uic.loadUi('UI/weather.ui', self)
         # Load the QSS style sheet
-        style_sheet_file = QFile("style.qss")
+        style_sheet_file = QFile("weather.qss")
         if style_sheet_file.open(QIODevice.OpenModeFlag.ReadOnly | QIODevice.OpenModeFlag.Text):
             style_sheet = QTextStream(style_sheet_file).readAll()
             self.setStyleSheet(style_sheet)
