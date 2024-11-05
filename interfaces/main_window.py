@@ -6,7 +6,7 @@ from calendar import Calendar
 from weather_window import Weather
 
 #TODO Разобраться с импортом из ui/main.py, питон не видит папку ui
-#! from ..ui.main_ui import UI_MainWindow
+from UI.main_ui import Ui_MainWindow
 
 
 class Main(QMainWindow, Ui_MainWindow):
