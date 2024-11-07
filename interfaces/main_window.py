@@ -1,11 +1,10 @@
 from PyQt6.QtWidgets import QMainWindow
 from PyQt6 import uic
-from PyQt6.QtCore import QFile, QIODevice, QTextStream
+from PyQt6.QtCore import QFile, QIODevice, QTextStream, QCoreApplication
 
-from calendar import Calendar
-from weather_window import Weather
+from interfaces.calendar import Calendar
+from interfaces.weather_window import Weather
 
-#TODO Разобраться с импортом из ui/main.py, питон не видит папку ui
 from UI.main_ui import Ui_MainWindow
 
 
@@ -14,7 +13,7 @@ class Main(QMainWindow, Ui_MainWindow):
         super().__init__()
 
         # Load the UI
-        self.setupUi()
+        self.setupUi(self)
         self.initUI()
         # Load the QSS style sheet
         style_sheet_file = QFile("main.qss")
@@ -23,8 +22,8 @@ class Main(QMainWindow, Ui_MainWindow):
             self.setStyleSheet(style_sheet)
         
         # Create other windows objects
-        self.calendar_window = Calendar()
-        self.weather_window = Weather()
+        self.calendar_window = Calendar(self)
+        self.weather_window = Weather(self)
 
 
     
@@ -34,8 +33,12 @@ class Main(QMainWindow, Ui_MainWindow):
     
     def show_calendar(self):
         self.calendar_window.show()
-        self.hide
+        self.hide()
 
     def show_weather(self):
         self.weather_window.show()
         self.hide()
+
+    def closeEvent(self, event):
+        QCoreApplication.quit()
+        event.accept()

@@ -91,7 +91,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="btn_back">
+   <widget class="QPushButton" name="btn_home">
     <property name="geometry">
      <rect>
       <x>5</x>
@@ -100,12 +100,21 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="text">
      <string/>
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../items/icons/back_arrow.png</normaloff>../items/icons/back_arrow.png</iconset>
+      <normaloff>../items/icons/home.png</normaloff>../items/icons/home.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>41</width>
+      <height>41</height>
+     </size>
     </property>
    </widget>
   </widget>
