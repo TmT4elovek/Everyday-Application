@@ -1,5 +1,4 @@
 from PyQt6.QtWidgets import QMainWindow
-from PyQt6 import uic
 from PyQt6.QtCore import QFile, QIODevice, QTextStream, QCoreApplication   
 from PyQt6.QtGui import QIcon
 
@@ -16,6 +15,7 @@ class Calendar(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.initUI()
         # Load the QSS style sheet
+        #! возможно, придется удалить, тк не будет иметь смысловой нагрузки
         style_sheet_file = QFile("calendar.qss")
         if style_sheet_file.open(QIODevice.OpenModeFlag.ReadOnly | QIODevice.OpenModeFlag.Text):
             style_sheet = QTextStream(style_sheet_file).readAll()
