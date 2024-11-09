@@ -6,7 +6,7 @@ from UI.calendar_ui import Ui_MainWindow
 
 
 class Calendar(QMainWindow, Ui_MainWindow):
-    def __init__(self, home_window: object):
+    def __init__(self, home_window: object) -> None:
         super().__init__(home_window)
         # Save the home window reference
         self.home_window = home_window
@@ -21,19 +21,19 @@ class Calendar(QMainWindow, Ui_MainWindow):
             style_sheet = QTextStream(style_sheet_file).readAll()
             self.setStyleSheet(style_sheet)
         
-    def initUI(self):
+    def initUI(self) -> None:
         # Set button icon
         self.btn_home.setIcon(QIcon("items\icons\home.png"))
 
         self.btn_home.pressed.connect(self.to_home)
     
-    def to_home(self):
+    def to_home(self) -> None:
         # Close the current window
         self.hide()
         # Open the main window here
         self.home_window.show()
 
     # If this window closed quit app
-    def closeEvent(self, event):
+    def closeEvent(self, event) -> None:
         QCoreApplication.quit()
         event.accept()

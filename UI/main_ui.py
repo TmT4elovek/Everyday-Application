@@ -44,12 +44,12 @@ class Ui_MainWindow(object):
         font.setPointSize(32)
         self.btn_to_weather.setFont(font)
         self.btn_to_weather.setObjectName("btn_to_weather")
-        self.btn_log_in = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.btn_log_in.setGeometry(QtCore.QRect(860, 5, 101, 31))
+        self.btn_register = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.btn_register.setGeometry(QtCore.QRect(860, 5, 101, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
-        self.btn_log_in.setFont(font)
-        self.btn_log_in.setObjectName("btn_log_in")
+        self.btn_register.setFont(font)
+        self.btn_register.setObjectName("btn_register")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1000, 21))
@@ -66,8 +66,8 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Main window"))
         self.clock.setText(_translate("MainWindow", "12:00"))
         self.btn_to_calendar.setText(_translate("MainWindow", "Календарь"))
         self.btn_to_weather.setText(_translate("MainWindow", "Погода"))
-        self.btn_log_in.setText(_translate("MainWindow", "Log in"))
+        self.btn_register.setText(_translate("MainWindow", "Sign up"))

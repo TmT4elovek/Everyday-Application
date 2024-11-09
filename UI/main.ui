@@ -29,7 +29,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Main window</string>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -98,7 +98,7 @@
      <string>Погода</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_log_in">
+   <widget class="QPushButton" name="btn_register">
     <property name="geometry">
      <rect>
       <x>860</x>
@@ -113,7 +113,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Log in</string>
+     <string>Sign up</string>
     </property>
    </widget>
   </widget>

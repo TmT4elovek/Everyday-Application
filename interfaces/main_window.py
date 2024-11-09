@@ -6,7 +6,7 @@ from interfaces.calendar import Calendar
 from interfaces.weather_window import Weather
 
 from UI.main_ui import Ui_MainWindow
-
+from interfaces.dialogs.register import Register
 
 class Main(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -26,20 +26,28 @@ class Main(QMainWindow, Ui_MainWindow):
         self.calendar_window = Calendar(self)
         self.weather_window = Weather(self)
 
+        #Create dialog window
+        self.register_dialog = Register()
+
 
     
-    def initUI(self):
+    def initUI(self) -> None:
         self.btn_to_calendar.pressed.connect(self.show_calendar)
         self.btn_to_weather.pressed.connect(self.show_weather)
+
+        self.btn_register.pressed.connect(self.register)
     
-    def show_calendar(self):
+    def show_calendar(self) -> None:
         self.calendar_window.show()
         self.hide()
 
-    def show_weather(self):
+    def show_weather(self) -> None:
         self.weather_window.show()
         self.hide()
 
-    def closeEvent(self, event):
+    def closeEvent(self, event) -> None:
         QCoreApplication.quit()
         event.accept()
+
+    def register(self) -> None:
+        self.register_dialog.show()
