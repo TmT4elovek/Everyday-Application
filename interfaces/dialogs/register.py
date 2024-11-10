@@ -4,22 +4,20 @@ from PyQt6.QtWidgets import QDialog
 
 from UI.register_ui import Ui_Dialog
 
-from interfaces.dialogs.log_in import LogIn
-
 
 class Register(QDialog, Ui_Dialog):
-    def __init__(self) -> None:
-        super().__init__()
+    def __init__(self, MainWindow: object) -> None:
+        super().__init__(MainWindow)
 
         self.setupUi(self)
         self.initUI()
-        self.setModal(True)
+        self.setModal(True) # Make the dialog modal, so it blocks the main window until it's closed
 
-        self.logIn_dial = LogIn()
+        self.main_w = MainWindow
 
     def initUI(self) -> None:
         # Get from bd countries
-        #! connect to bd
+        #! connect to db
         conn = sqlite3.connect('databases/database.db')
         cur = conn.cursor()
 
@@ -46,13 +44,14 @@ class Register(QDialog, Ui_Dialog):
         # connect logIn btn
         self.btn_logIn.clicked.connect(self.on_logIn)
 
+    # Changed country_combo
     def on_country_changed(self) -> None:
         city = self.get_city()
         self.city_combo.clear()
         self.city_combo.addItems(city)
 
     def get_city(self) -> list:
-        #! connect to bd
+        #! connect to db
         conn = sqlite3.connect('databases/database.db')
         cur = conn.cursor()
 
@@ -94,7 +93,7 @@ class Register(QDialog, Ui_Dialog):
             self.sec_password_edit.clear()
             return
         
-        #! connect to bd
+        #! connect to db
         conn = sqlite3.connect('databases/database.db')
         cur = conn.cursor()
 
@@ -124,11 +123,11 @@ class Register(QDialog, Ui_Dialog):
         #! close connection
         conn.close()
 
-        self.logIn_dial.show()
+        self.main_w.log_in()
         self.close()
 
     def get_city_id(self, city: str) -> int:
-        #! connect to bd
+        #! connect to db
         conn = sqlite3.connect('databases/database.db')
         cur = conn.cursor()
         
@@ -150,6 +149,7 @@ class Register(QDialog, Ui_Dialog):
     def is_nickname_corr(self, nickname: str) -> bool:
         return nickname.isalnum()
     
+    # Go to logIn dialog
     def on_logIn(self) -> None:
-        self.logIn_dial.show()
+        self.main_w.log_in()
         self.close()

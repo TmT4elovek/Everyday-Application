@@ -1,12 +1,13 @@
 from PyQt6.QtWidgets import QMainWindow
-
 from PyQt6.QtCore import QFile, QIODevice, QTextStream, QCoreApplication
+from PyQt6.QtGui import QIcon
 
 from interfaces.calendar import Calendar
 from interfaces.weather_window import Weather
 
 from UI.main_ui import Ui_MainWindow
 from interfaces.dialogs.register import Register
+from interfaces.dialogs.log_in import LogIn
 
 class Main(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -27,10 +28,12 @@ class Main(QMainWindow, Ui_MainWindow):
         self.weather_window = Weather(self)
 
         #Create dialog window
-        self.register_dialog = Register()
+        self.register_dialog = Register(self)
+        self.log_in_dialog = LogIn(self)
 
+        #userdata
+        self.__user = tuple()
 
-    
     def initUI(self) -> None:
         self.btn_to_calendar.pressed.connect(self.show_calendar)
         self.btn_to_weather.pressed.connect(self.show_weather)
@@ -51,3 +54,30 @@ class Main(QMainWindow, Ui_MainWindow):
 
     def register(self) -> None:
         self.register_dialog.show()
+
+    def log_in(self) -> None:
+        self.log_in_dialog.show()
+
+    @property
+    def user(self) -> tuple:
+        return self.__user
+
+    @user.setter
+    def user(self, user: tuple) -> None:
+        self.__user = user
+
+    def check_user(self) -> None:
+        if self.__user:
+            self.nickname_label.setText(self.user[1])
+            self.btn_register.setText('')
+            self.btn_register.setIcon(QIcon('items\icons\log_out.png'))
+            self.btn_register.pressed.connect(self.log_out)
+        else:
+            self.nickname_label.setText('')
+            self.btn_register.setText('Sign up')
+            self.btn_register.setIcon(QIcon())
+            self.btn_register.pressed.connect(self.register)
+        
+    def log_out(self) -> None:
+        self.__user = ()
+        self.check_user()

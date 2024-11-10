@@ -98,23 +98,59 @@
      <string>Погода</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_register">
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>860</x>
-      <y>5</y>
-      <width>101</width>
-      <height>31</height>
+      <x>553</x>
+      <y>0</y>
+      <width>381</width>
+      <height>51</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
     </property>
-    <property name="text">
-     <string>Sign up</string>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
     </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item alignment="Qt::AlignRight">
+      <widget class="QLabel" name="nickname_label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_register">
+       <property name="minimumSize">
+        <size>
+         <width>32</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>101</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Sign up</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

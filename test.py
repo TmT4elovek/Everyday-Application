@@ -32,22 +32,12 @@ end = time.time()
 print(f'Time taken: {end - start} seconds')
 
 
+user: tuple = cur.execute(
+            '''
+                SELECT *
+                FROM user
+                WHERE username = ? AND password = ?
+            ''', ('Oqisu', "1234")).fetchone()
 
-def get_city_id(city):
-        #! connect to bd
-        conn = sqlite3.connect('databases/database.db')
-        cur = conn.cursor()
-        
-        city_id = cur.execute('''
-            SELECT id
-            FROM worldcities
-            WHERE city = ?
-        ''', (city,)
-        )
-
-        #! close connection
-        conn.close()
-
-        return str(city_id)
-
+print(user)
 print(len('ffffffffffffffffffffffffffffffffffffffff'))
