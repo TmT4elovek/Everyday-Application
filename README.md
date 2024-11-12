@@ -5,3 +5,5 @@ With this application, you can make notes in the calendar, track the time and wa
 
 <h2>Main technologies</h2>
 request, PyQt6, OpenWeather API, SQlite and other
+<h3>Установка</h3>
+<code>pip install requests PyQt6</code> - В терминал
