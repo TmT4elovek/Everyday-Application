@@ -1,0 +1,200 @@
+{
+  "cod": "200",
+  "message": 0,
+  "cnt": 5,
+  "list": [
+    {
+      "dt": 1731434400,
+      "main": {
+        "temp": 16.07,
+        "feels_like": 15.51,
+        "temp_min": 16.07,
+        "temp_max": 16.55,
+        "pressure": 1013,
+        "sea_level": 1013,
+        "grnd_level": 1012,
+        "humidity": 68,
+        "temp_kf": -0.48
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01n"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 5.09,
+        "deg": 350,
+        "gust": 9.76
+      },
+      "visibility": 10000,
+      "pop": 0,
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2024-11-12 18:00:00"
+    },
+    {
+      "dt": 1731445200,
+      "main": {
+        "temp": 16.11,
+        "feels_like": 15.4,
+        "temp_min": 16.11,
+        "temp_max": 16.25,
+        "pressure": 1016,
+        "sea_level": 1016,
+        "grnd_level": 1015,
+        "humidity": 62,
+        "temp_kf": -0.14
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01n"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 5.5,
+        "deg": 3,
+        "gust": 11.49
+      },
+      "visibility": 10000,
+      "pop": 0,
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2024-11-12 21:00:00"
+    },
+    {
+      "dt": 1731456000,
+      "main": {
+        "temp": 17.74,
+        "feels_like": 16.88,
+        "temp_min": 17.74,
+        "temp_max": 17.74,
+        "pressure": 1019,
+        "sea_level": 1019,
+        "grnd_level": 1018,
+        "humidity": 50,
+        "temp_kf": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 4.61,
+        "deg": 27,
+        "gust": 5.27
+      },
+      "visibility": 10000,
+      "pop": 0,
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2024-11-13 00:00:00"
+    },
+    {
+      "dt": 1731466800,
+      "main": {
+        "temp": 19.13,
+        "feels_like": 18.2,
+        "temp_min": 19.13,
+        "temp_max": 19.13,
+        "pressure": 1020,
+        "sea_level": 1020,
+        "grnd_level": 1018,
+        "humidity": 42,
+        "temp_kf": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 3.91,
+        "deg": 74,
+        "gust": 3.39
+      },
+      "visibility": 10000,
+      "pop": 0,
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2024-11-13 03:00:00"
+    },
+    {
+      "dt": 1731477600,
+      "main": {
+        "temp": 18.73,
+        "feels_like": 17.78,
+        "temp_min": 18.73,
+        "temp_max": 18.73,
+        "pressure": 1021,
+        "sea_level": 1021,
+        "grnd_level": 1019,
+        "humidity": 43,
+        "temp_kf": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 6.09,
+        "deg": 88,
+        "gust": 4.76
+      },
+      "visibility": 10000,
+      "pop": 0,
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2024-11-13 06:00:00"
+    }
+  ],
+  "city": {
+    "id": 1850144,
+    "name": "Tokyo",
+    "coord": {
+      "lat": 35.6897,
+      "lon": 139.6922
+    },
+    "country": "JP",
+    "population": 12445327,
+    "timezone": 32400,
+    "sunrise": 1731446105,
+    "sunset": 1731483367
+  }
+}

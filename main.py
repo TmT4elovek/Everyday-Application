@@ -11,3 +11,8 @@ if __name__ == '__main__':
     main_window.show()
     # Close window
     sys.exit(app.exec())
+
+
+
+    #!!!!! Спросить почему питон не видит getter method класса Main в Weather(метод get_response 126 Строчка)
+    #!!!!! Спросить как реализовать часы на главном окне

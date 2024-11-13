@@ -16,12 +16,6 @@ class Main(QMainWindow, Ui_MainWindow):
         # Load the UI
         self.setupUi(self)
         self.initUI()
-        # Load the QSS style sheet
-        #! возможно, придется удалить, тк не будет иметь смысловой нагрузки
-        style_sheet_file = QFile("main.qss")
-        if style_sheet_file.open(QIODevice.OpenModeFlag.ReadOnly | QIODevice.OpenModeFlag.Text):
-            style_sheet = QTextStream(style_sheet_file).readAll()
-            self.setStyleSheet(style_sheet)
         
         # Create other windows objects
         self.calendar_window = Calendar(self)
@@ -32,7 +26,7 @@ class Main(QMainWindow, Ui_MainWindow):
         self.log_in_dialog = LogIn(self)
 
         #userdata
-        self.__user = tuple()
+        self._user = ()
 
     def initUI(self) -> None:
         self.btn_to_calendar.pressed.connect(self.show_calendar)
@@ -60,14 +54,14 @@ class Main(QMainWindow, Ui_MainWindow):
 
     @property
     def user(self) -> tuple:
-        return self.__user
+        return self._user
 
     @user.setter
     def user(self, user: tuple) -> None:
-        self.__user = user
+        self._user = user
 
     def check_user(self) -> None:
-        if self.__user:
+        if self._user:
             self.nickname_label.setText(self.user[1])
             self.btn_register.setText('')
             self.btn_register.setIcon(QIcon('items\icons\log_out.png'))
@@ -79,5 +73,7 @@ class Main(QMainWindow, Ui_MainWindow):
             self.btn_register.pressed.connect(self.register)
         
     def log_out(self) -> None:
-        self.__user = ()
+        self._user = ()
         self.check_user()
+
+    #TODO Рабочие часы

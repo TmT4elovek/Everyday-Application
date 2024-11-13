@@ -14,12 +14,6 @@ class Calendar(QMainWindow, Ui_MainWindow):
         # Load the UI file
         self.setupUi(self)
         self.initUI()
-        # Load the QSS style sheet
-        #! возможно, придется удалить, тк не будет иметь смысловой нагрузки
-        style_sheet_file = QFile("calendar.qss")
-        if style_sheet_file.open(QIODevice.OpenModeFlag.ReadOnly | QIODevice.OpenModeFlag.Text):
-            style_sheet = QTextStream(style_sheet_file).readAll()
-            self.setStyleSheet(style_sheet)
         
     def initUI(self) -> None:
         # Set button icon

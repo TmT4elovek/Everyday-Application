@@ -168,7 +168,7 @@ color: rgb(113, 113, 170);</string>
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="weather_3">
+                 <widget class="QLabel" name="weather">
                   <property name="styleSheet">
                    <string notr="true">background: rgb(105, 105, 157, 0.7);
 border-bottom-left-radius: 0px;
@@ -241,7 +241,7 @@ padding-left: 20px;</string>
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="label">
+               <widget class="QLabel" name="pressure">
                 <property name="font">
                  <font>
                   <pointsize>14</pointsize>
@@ -278,6 +278,21 @@ background: rgba(115, 115, 173, 0.4);
 </string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_4">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_3">
              <property name="bottomMargin">
@@ -289,7 +304,7 @@ background: rgba(115, 115, 173, 0.4);
                 <number>0</number>
                </property>
                <item>
-                <widget class="QLabel" name="day_of_week">
+                <widget class="QLabel" name="day_of_week_1">
                  <property name="styleSheet">
                   <string notr="true">background: rgb(255, 255, 255, 0.8);
 border-top-right-radius: 0px;
@@ -307,7 +322,7 @@ font: bold;</string>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="date">
+                <widget class="QLabel" name="date_1">
                  <property name="font">
                   <font>
                    <pointsize>10</pointsize>
@@ -330,7 +345,7 @@ padding-bottom: 10px;</string>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_4">
                <item>
-                <widget class="QLabel" name="weather_icon">
+                <widget class="QLabel" name="weather_icon_1">
                  <property name="font">
                   <font>
                    <pointsize>1</pointsize>
@@ -356,7 +371,7 @@ padding-bottom: 10px;</string>
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QLabel" name="temp_day">
+                  <widget class="QLabel" name="temp_day_1">
                    <property name="font">
                     <font>
                      <pointsize>16</pointsize>
@@ -372,29 +387,12 @@ border-bottom-right-radius: 0px;</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QLabel" name="temp_night">
-                   <property name="font">
-                    <font>
-                     <pointsize>12</pointsize>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background: rgb(255, 255, 255, 0.3);
-border-top-left-radius: 0px;
-border-top-right-radius: 0px;</string>
-                   </property>
-                   <property name="text">
-                    <string>+4*</string>
-                   </property>
-                  </widget>
-                 </item>
                 </layout>
                </item>
               </layout>
              </item>
              <item>
-              <widget class="QLabel" name="weather">
+              <widget class="QLabel" name="weather_1">
                <property name="font">
                 <font>
                  <pointsize>-1</pointsize>
@@ -530,23 +528,6 @@ border-bottom-right-radius: 0px;</string>
                    </property>
                    <property name="text">
                     <string>+8*</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="temp_night_2">
-                   <property name="font">
-                    <font>
-                     <pointsize>12</pointsize>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background: rgb(255, 255, 255, 0.3);
-border-top-left-radius: 0px;
-border-top-right-radius: 0px;</string>
-                   </property>
-                   <property name="text">
-                    <string>+2*</string>
                    </property>
                   </widget>
                  </item>
@@ -694,29 +675,12 @@ border-bottom-right-radius: 0px;</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QLabel" name="temp_night_3">
-                   <property name="font">
-                    <font>
-                     <pointsize>12</pointsize>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background: rgb(255, 255, 255, 0.3);
-border-top-left-radius: 0px;
-border-top-right-radius: 0px;</string>
-                   </property>
-                   <property name="text">
-                    <string>+4*</string>
-                   </property>
-                  </widget>
-                 </item>
                 </layout>
                </item>
               </layout>
              </item>
              <item>
-              <widget class="QLabel" name="label_3">
+              <widget class="QLabel" name="weather_3">
                <property name="font">
                 <font>
                  <pointsize>-1</pointsize>
@@ -855,29 +819,12 @@ border-bottom-right-radius: 0px;</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QLabel" name="temp_night_4">
-                   <property name="font">
-                    <font>
-                     <pointsize>12</pointsize>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background: rgb(255, 255, 255, 0.3);
-border-top-left-radius: 0px;
-border-top-right-radius: 0px;</string>
-                   </property>
-                   <property name="text">
-                    <string>+4*</string>
-                   </property>
-                  </widget>
-                 </item>
                 </layout>
                </item>
               </layout>
              </item>
              <item>
-              <widget class="QLabel" name="label_4">
+              <widget class="QLabel" name="weather_4">
                <property name="font">
                 <font>
                  <pointsize>-1</pointsize>
