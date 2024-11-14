@@ -45,7 +45,7 @@ class LogIn(QDialog, Ui_Dialog):
             self.password_edit.clear()
             return
         
-        self.main_w.user = user
+        self.main_w.set_user(user)
         #! close connection
         conn.close()
 

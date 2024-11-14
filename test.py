@@ -3,6 +3,7 @@ from SECRET import API_KEY
 import datetime
 import time
 
+
 start = time.time()
 
 deg = int

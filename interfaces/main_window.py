@@ -13,6 +13,9 @@ class Main(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
 
+        #userdata
+        self._user = ()
+
         # Load the UI
         self.setupUi(self)
         self.initUI()
@@ -25,8 +28,7 @@ class Main(QMainWindow, Ui_MainWindow):
         self.register_dialog = Register(self)
         self.log_in_dialog = LogIn(self)
 
-        #userdata
-        self._user = ()
+        
 
     def initUI(self) -> None:
         self.btn_to_calendar.pressed.connect(self.show_calendar)
@@ -52,25 +54,37 @@ class Main(QMainWindow, Ui_MainWindow):
     def log_in(self) -> None:
         self.log_in_dialog.show()
 
-    @property
-    def user(self) -> tuple:
-        return self._user
+    # @property
+    # def user(self) -> tuple:
+    #     return self._user
 
-    @user.setter
-    def user(self, user: tuple) -> None:
+    # @user.setter
+    # def user(self, user: tuple) -> None:
+    #     self._user = user
+
+    def set_user(self, user: tuple) -> None:
         self._user = user
+
+    def get_user(self) -> tuple:
+        return self._user
 
     def check_user(self) -> None:
         if self._user:
-            self.nickname_label.setText(self.user[1])
+            self.nickname_label.setText(self._user[1])
             self.btn_register.setText('')
             self.btn_register.setIcon(QIcon('items\icons\log_out.png'))
             self.btn_register.pressed.connect(self.log_out)
+
+            self.weather_window.__init__(self)
+            self.calendar_window.__init__(self)
         else:
             self.nickname_label.setText('')
             self.btn_register.setText('Sign up')
             self.btn_register.setIcon(QIcon())
             self.btn_register.pressed.connect(self.register)
+
+            self.weather_window.__init__(self)
+            self.calendar_window.__init__(self)
         
     def log_out(self) -> None:
         self._user = ()

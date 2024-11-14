@@ -3,22 +3,21 @@ import datetime
 
 import sqlite3
 
-from PyQt6.QtWidgets import QMainWindow, QPushButton, QLabel
-from PyQt6.QtCore import QCoreApplication, QSize, Qt
-from PyQt6.QtGui import QIcon, QCursor, QPixmap
+from PyQt6.QtWidgets import QMainWindow
+from PyQt6.QtCore import QCoreApplication
+from PyQt6.QtGui import QIcon, QImage, QPixmap
 
 from UI.weather_ui import Ui_MainWindow
+from UI.weather_withoutUser_ui import Ui_MainWindow_WithoutUser
 from SECRET import API_KEY
 
-class Weather(QMainWindow, Ui_MainWindow):
+class Weather(QMainWindow, Ui_MainWindow, Ui_MainWindow_WithoutUser):
     def __init__(self, home_window: object) -> None:
         super().__init__(home_window)
 
-
-
         # Save the home window reference
         self.home_window = home_window
-        if self.home_window.user:
+        if self.home_window.get_user():
             #Api request
             self.get_response()
 
@@ -26,34 +25,7 @@ class Weather(QMainWindow, Ui_MainWindow):
             self.setupUi(self)
             self.initUI()
         else:
-            # Btn back to main
-            self.btn_home = QPushButton(parent=self.frame)
-            self.btn_home.setMinimumSize(QSize(50, 50))
-            self.btn_home.setMaximumSize(QSize(50, 50))
-            self.btn_home.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-            self.btn_home.setText("")
-            icon = QIcon()
-            icon.addPixmap(QPixmap("../items/icons/home.png"), QIcon.Mode.Normal, QIcon.State.Off)
-            self.btn_home.setIcon(icon)
-            self.btn_home.setIconSize(QSize(50, 50))
-            self.btn_home.setObjectName("btn_home")
-            self.btn_home.move(885, 12)
-            self.btn_home.styleSheet(
-                'background: rgb(255, 255, 255);\n\
-                border-radius: 10px;\n\
-                border: 4px solid rgb(190, 190, 213);'
-            )
-
-            # Text about need to log in
-            self.label_log = QLabel('Войдите в аккаунт', self)
-            self.label_log.resize(500, 200)
-            self.label_log.move(150, 180)
-            self.label_log.setFont(self.label_log.font().setPointSize(32))
-            self.label_log.styleSheet(
-                'border-radius: 8px;\n\
-                background: rgb(115, 115, 173);\n'
-            )
-
+            self.setupUi_withoutUser(self)
         # btn back to main connect
         self.btn_home.pressed.connect(self.to_home)
 
@@ -112,10 +84,10 @@ class Weather(QMainWindow, Ui_MainWindow):
         }
 
         # Set city
-        self.city.setText(f'Weather in {self.get_user_city(self.home_window.user)[1]}')
+        self.city.setText(f'Weather in {self.get_user_city(self.home_window.get_user())[1]}')
 
         ######## TODAY ########
-        weather = self.dates[0]['weather']
+        weather = self.dates[0]['weather'][0]
         wind = self.dates[0]['wind']
         main = self.dates[0]['main']
 
@@ -126,7 +98,7 @@ class Weather(QMainWindow, Ui_MainWindow):
         self.temp_like.setText(f'Feels like {temp_like}')
 
         # Set today icon
-        self.weather_icon.setIcon(QIcon(f'items\weather_icons\{weather["icon"]}.png'))
+        self.weather_icon_5.setPixmap(QPixmap(QImage(f'items\weather_icons\{weather["icon"]}.png')))
 
         # Set wind
         self.wind.setText(f'{wind["speed"]} mps, {self.conv_deg_to_ws(wind["deg"])}')
@@ -156,7 +128,7 @@ class Weather(QMainWindow, Ui_MainWindow):
 
     def get_response(self) -> None:
         #get city
-        city = self.get_user_city(self.home_window.user) #! Питон не видит getter
+        city = self.get_user_city(self.home_window.get_user())
         lat = city[3]
         lon = city[4]
 
@@ -183,7 +155,7 @@ class Weather(QMainWindow, Ui_MainWindow):
 
         city: tuple = cur.execute(
             '''
-                SELECT city
+                SELECT *
                 FROM worldcities
                 WHERE id = ?
             ''', (user[-1],)).fetchone()
@@ -193,7 +165,7 @@ class Weather(QMainWindow, Ui_MainWindow):
 
         return city
 
-    def conv_deg_to_ws(deg: int) -> str:
+    def conv_deg_to_ws(self, deg: int) -> str:
         if 337 <= deg <= 360 or 0 <= deg <= 22:
             return 'N'
         elif 22 <= deg <= 67:
@@ -212,7 +184,7 @@ class Weather(QMainWindow, Ui_MainWindow):
             return 'NE'
 
     def set_weather_widget(self, score: int) -> None:
-        weather = self.dates[score]['weather']
+        weather = self.dates[score]['weather'][0]
         main = self.dates[score]['main']
         dt = datetime.datetime.utcfromtimestamp(self.dates[score]['dt'])
 
@@ -221,7 +193,7 @@ class Weather(QMainWindow, Ui_MainWindow):
         self.weather_widgets[f'temp_day_{score}'].setText(f"+{temp}") if temp >= 0 else self.weather_widgets[f'temp_day_{score}'].setText(f"-{temp}")
 
         # Set icon
-        self.weather_widgets[f'weather_icon_{score}'].setIcon(QIcon(f'items\weather_icons\{weather["icon"]}.png'))
+        self.weather_widgets[f'weather_icon_{score}'].setPixmap(QPixmap(QImage(f'items\weather_icons\{weather["icon"]}.png')))
 
         # Set weather discription
         self.weather_widgets[f'weather_{score}'].setText(weather['description'].title())
