@@ -1,6 +1,9 @@
 from PyQt6.QtWidgets import QMainWindow
-from PyQt6.QtCore import QCoreApplication
+from PyQt6.QtCore import QCoreApplication, QThread
 from PyQt6.QtGui import QIcon
+
+import datetime
+import time
 
 from interfaces.calendar import Calendar
 from interfaces.weather_window import Weather
@@ -8,6 +11,16 @@ from interfaces.weather_window import Weather
 from UI.main_ui import Ui_MainWindow
 from interfaces.dialogs.register import Register
 from interfaces.dialogs.log_in import LogIn
+
+
+class TaskThread(QThread):
+    def __init__(self, foo):
+        super().__init__()
+        self.foo = foo
+    
+    def run(self):
+        self.foo()
+
 
 class Main(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -29,7 +42,9 @@ class Main(QMainWindow, Ui_MainWindow):
         self.register_dialog = Register(self)
         self.log_in_dialog = LogIn(self)
 
-        
+        # Add thread for clock
+        self.clock_thread = TaskThread(self.clock_work)
+        self.clock_thread.start()
 
     def initUI(self) -> None:
         self.btn_to_calendar.pressed.connect(self.show_calendar)
@@ -85,4 +100,8 @@ class Main(QMainWindow, Ui_MainWindow):
         self._user = ()
         self.check_user()
 
-    #TODO Рабочие часы
+    def clock_work(self):
+        while True:
+            now = datetime.datetime.now()
+            self.clock.setText(f'{now.hour:02}:{now.minute:02}')
+            time.sleep(60)
