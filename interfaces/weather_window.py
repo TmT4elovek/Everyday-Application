@@ -8,7 +8,7 @@ from PyQt6.QtCore import QCoreApplication
 from PyQt6.QtGui import QIcon, QImage, QPixmap
 
 from UI.weather_ui import Ui_MainWindow
-from UI.weather_withoutUser_ui import Ui_MainWindow_WithoutUser
+from UI.withoutUser_ui import Ui_MainWindow_WithoutUser
 from SECRET import API_KEY
 
 class Weather(QMainWindow, Ui_MainWindow, Ui_MainWindow_WithoutUser):

@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import QMainWindow
-from PyQt6.QtCore import QFile, QIODevice, QTextStream, QCoreApplication
+from PyQt6.QtCore import QCoreApplication
 from PyQt6.QtGui import QIcon
 
 from interfaces.calendar import Calendar
@@ -53,14 +53,6 @@ class Main(QMainWindow, Ui_MainWindow):
 
     def log_in(self) -> None:
         self.log_in_dialog.show()
-
-    # @property
-    # def user(self) -> tuple:
-    #     return self._user
-
-    # @user.setter
-    # def user(self, user: tuple) -> None:
-    #     self._user = user
 
     def set_user(self, user: tuple) -> None:
         self._user = user
