@@ -10,12 +10,6 @@
     <height>600</height>
    </rect>
   </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
-  </property>
   <property name="minimumSize">
    <size>
     <width>1000</width>
@@ -29,83 +23,29 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Main window</string>
-  </property>
-  <property name="styleSheet">
-   <string notr="true"/>
+   <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="clock">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>50</y>
-      <width>340</width>
-      <height>160</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>100</pointsize>
-     </font>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="text">
-     <string>12:00</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_to_calendar">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>350</y>
-      <width>300</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>32</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Calendar</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_to_weather">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>350</y>
-      <width>300</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>32</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Weather</string>
-    </property>
-   </widget>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>553</x>
-      <y>0</y>
-      <width>381</width>
-      <height>51</height>
+      <x>-1</x>
+      <y>-1</y>
+      <width>1000</width>
+      <height>559</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1000</width>
+      <height>559</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1000</width>
+      <height>559</height>
+     </size>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -113,41 +53,311 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item alignment="Qt::AlignRight">
-      <widget class="QLabel" name="nickname_label">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="frame_2">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>70</height>
+        </size>
        </property>
-       <property name="text">
-        <string/>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
        </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item alignment="Qt::AlignTop">
+         <widget class="QFrame" name="frame_6">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignTop">
+         <widget class="QFrame" name="frame_5">
+          <property name="maximumSize">
+           <size>
+            <width>381</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item alignment="Qt::AlignRight">
+            <widget class="QLabel" name="nickname_label">
+             <property name="font">
+              <font>
+               <family>Segoe UI Black</family>
+               <pointsize>12</pointsize>
+               <weight>10</weight>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 87 12pt &quot;Segoe UI Black&quot;;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_register">
+             <property name="minimumSize">
+              <size>
+               <width>32</width>
+               <height>31</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>101</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI Black</family>
+               <pointsize>14</pointsize>
+               <weight>10</weight>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: rgb(115, 115, 173);\n
+border: None;
+border-radius: 6px;
+font: 87 14pt &quot;Segoe UI Black&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Sign up</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="btn_register">
-       <property name="minimumSize">
-        <size>
-         <width>32</width>
-         <height>31</height>
-        </size>
+      <widget class="QFrame" name="frame_3">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
        </property>
-       <property name="maximumSize">
-        <size>
-         <width>101</width>
-         <height>16777215</height>
-        </size>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
        </property>
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-        </font>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="clock">
+          <property name="minimumSize">
+           <size>
+            <width>340</width>
+            <height>160</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>340</width>
+            <height>160</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI Black</family>
+            <pointsize>100</pointsize>
+            <weight>10</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 87 100pt &quot;Segoe UI Black&quot;;</string>
+          </property>
+          <property name="text">
+           <string>12:00</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_4">
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
        </property>
-       <property name="text">
-        <string>Sign up</string>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
        </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="frame_7">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QPushButton" name="btn_to_calendar">
+             <property name="minimumSize">
+              <size>
+               <width>300</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>300</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI Black</family>
+               <pointsize>32</pointsize>
+               <weight>10</weight>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: rgb(115, 115, 173);\n
+border: None;
+border-radius: 6px;
+font: 87 32pt &quot;Segoe UI Black&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Calendar</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_8">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QPushButton" name="btn_to_weather">
+             <property name="minimumSize">
+              <size>
+               <width>300</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>300</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI Black</family>
+               <pointsize>32</pointsize>
+               <weight>10</weight>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: rgb(115, 115, 173);\n
+border: None;
+border-radius: 6px;
+font: 87 32pt &quot;Segoe UI Black&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Weather</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>70</width>
+               <height>70</height>
+              </size>
+             </property>
+             <property name="shortcut">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </item>
     </layout>
@@ -161,12 +371,6 @@
      <width>1000</width>
      <height>21</height>
     </rect>
-   </property>
-   <property name="defaultUp">
-    <bool>false</bool>
-   </property>
-   <property name="nativeMenuBar">
-    <bool>true</bool>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>

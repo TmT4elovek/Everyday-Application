@@ -15,6 +15,7 @@ class Main(QMainWindow, Ui_MainWindow):
 
         #userdata
         self._user = ()
+        self.today_weather_icon = ''
 
         # Load the UI
         self.setupUi(self)
@@ -69,6 +70,7 @@ class Main(QMainWindow, Ui_MainWindow):
 
             self.weather_window.__init__(self)
             self.calendar_window.__init__(self)
+            self.btn_to_weather.setIcon(QIcon(f'items\weather_icons\{self.today_weather_icon}.png'))
         else:
             self.nickname_label.setText('')
             self.btn_register.setText('Sign up')
@@ -77,6 +79,7 @@ class Main(QMainWindow, Ui_MainWindow):
 
             self.weather_window.__init__(self)
             self.calendar_window.__init__(self)
+            self.btn_to_weather.setIcon(QIcon(f'items\weather_icons\{self.today_weather_icon}.png'))
         
     def log_out(self) -> None:
         self._user = ()

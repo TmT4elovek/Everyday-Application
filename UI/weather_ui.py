@@ -42,17 +42,19 @@ class Ui_MainWindow(object):
         self.horizontalLayout_17.setObjectName("horizontalLayout_17")
         self.city = QtWidgets.QLabel(parent=self.frame)
         font = QtGui.QFont()
-        font.setPointSize(-1)
-        font.setBold(True)
+        font.setFamily("Segoe UI Black")
+        font.setPointSize(30)
+        font.setBold(False)
         font.setItalic(False)
-        font.setWeight(75)
+        font.setWeight(10)
         self.city.setFont(font)
         self.city.setStyleSheet("background: rgb(255, 255, 255, 0);\n"
 "max-height: 50px;\n"
 "font-size: 30px;\n"
 "font: bold;\n"
 "border: 0px;\n"
-"padding-left: 20px;")
+"padding-left: 20px;\n"
+"font: 87 30pt \"Segoe UI Black\";")
         self.city.setObjectName("city")
         self.horizontalLayout_17.addWidget(self.city)
         self.btn_home = QtWidgets.QPushButton(parent=self.frame)
@@ -73,11 +75,16 @@ class Ui_MainWindow(object):
         self.horizontalLayout_13.setObjectName("horizontalLayout_13")
         self.temp = QtWidgets.QLabel(parent=self.frame)
         font = QtGui.QFont()
+        font.setFamily("Segoe UI Black")
         font.setPointSize(26)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(10)
         self.temp.setFont(font)
         self.temp.setStyleSheet("border: 0px;\n"
 "padding-left: 100px;\n"
-"color: rgb(113, 113, 170);")
+"color: rgb(113, 113, 170);\n"
+"font: 87 26pt \"Segoe UI Black\";")
         self.temp.setObjectName("temp")
         self.horizontalLayout_13.addWidget(self.temp)
         self.weather_icon_5 = QtWidgets.QLabel(parent=self.frame)
@@ -100,7 +107,8 @@ class Ui_MainWindow(object):
 "border-bottom-right-radius: 0px;\n"
 "border: 0px;\n"
 "padding-left: 20px;\n"
-"font: 20px;")
+"font: 20px;\n"
+"font: 87 20pt \"Segoe UI Black\";")
         self.weather.setObjectName("weather")
         self.verticalLayout_12.addWidget(self.weather)
         self.temp_like = QtWidgets.QLabel(parent=self.frame)
@@ -109,7 +117,8 @@ class Ui_MainWindow(object):
 "border-top-right-radius: 0px;\n"
 "border: 0px;\n"
 "padding-left: 20px;\n"
-"font: 15px;")
+"font: 15px;\n"
+"font: 87 15pt \"Segoe UI Black\";")
         self.temp_like.setObjectName("temp_like")
         self.verticalLayout_12.addWidget(self.temp_like)
         self.horizontalLayout_13.addLayout(self.verticalLayout_12)
@@ -119,24 +128,39 @@ class Ui_MainWindow(object):
         self.horizontalLayout_14.setObjectName("horizontalLayout_14")
         self.wind = QtWidgets.QLabel(parent=self.frame)
         font = QtGui.QFont()
+        font.setFamily("Segoe UI Black")
         font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(10)
         self.wind.setFont(font)
         self.wind.setStyleSheet("border: 0px;\n"
-"padding-left: 20px;")
+"padding-left: 20px;\n"
+"font: 87 14pt \"Segoe UI Black\";")
         self.wind.setObjectName("wind")
         self.horizontalLayout_14.addWidget(self.wind)
         self.humidity = QtWidgets.QLabel(parent=self.frame)
         font = QtGui.QFont()
+        font.setFamily("Segoe UI Black")
         font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(10)
         self.humidity.setFont(font)
-        self.humidity.setStyleSheet("border: 0px;")
+        self.humidity.setStyleSheet("border: 0px;\n"
+"font: 87 14pt \"Segoe UI Black\";")
         self.humidity.setObjectName("humidity")
         self.horizontalLayout_14.addWidget(self.humidity)
         self.pressure = QtWidgets.QLabel(parent=self.frame)
         font = QtGui.QFont()
+        font.setFamily("Segoe UI Black")
         font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(10)
         self.pressure.setFont(font)
-        self.pressure.setStyleSheet("border: 0px;")
+        self.pressure.setStyleSheet("border: 0px;\n"
+"font: 87 14pt \"Segoe UI Black\";")
         self.pressure.setObjectName("pressure")
         self.horizontalLayout_14.addWidget(self.pressure)
         self.verticalLayout_13.addLayout(self.horizontalLayout_14)
@@ -153,11 +177,12 @@ class Ui_MainWindow(object):
 "")
         self.weathe_tomorrow.setObjectName("weathe_tomorrow")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.weathe_tomorrow)
-        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_4.setSpacing(0)
+        self.verticalLayout_4.setContentsMargins(9, 9, 9, 9)
+        self.verticalLayout_4.setSpacing(6)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
         self.verticalLayout_3.setContentsMargins(-1, -1, -1, 70)
+        self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setSpacing(0)
@@ -168,19 +193,25 @@ class Ui_MainWindow(object):
 "border-bottom-right-radius: 0px;\n"
 "max-height: 50px;\n"
 "font-size: 20px;\n"
-"font: bold;")
+"font: bold;\n"
+"font: 87 15pt \"Segoe UI Black\";")
         self.day_of_week_1.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.day_of_week_1.setObjectName("day_of_week_1")
         self.horizontalLayout_3.addWidget(self.day_of_week_1)
         self.date_1 = QtWidgets.QLabel(parent=self.weathe_tomorrow)
         font = QtGui.QFont()
+        font.setFamily("Segoe UI Black")
         font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(10)
         self.date_1.setFont(font)
         self.date_1.setStyleSheet("background: rgb(255, 255, 255, 0.8);\n"
 "border-top-left-radius: 0px;\n"
 "border-bottom-left-radius: 0px;\n"
 "max-height: 40px;\n"
-"padding-bottom: 10px;")
+"padding-bottom: 10px;\n"
+"font: 87 10pt \"Segoe UI Black\";")
         self.date_1.setObjectName("date_1")
         self.horizontalLayout_3.addWidget(self.date_1)
         self.verticalLayout_3.addLayout(self.horizontalLayout_3)
@@ -201,27 +232,33 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.temp_day_1 = QtWidgets.QLabel(parent=self.weathe_tomorrow)
         font = QtGui.QFont()
+        font.setFamily("Segoe UI Black")
         font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(10)
         self.temp_day_1.setFont(font)
         self.temp_day_1.setStyleSheet("background: rgb(255, 255, 255, 0.6);\n"
 "border-bottom-left-radius: 0px;\n"
-"border-bottom-right-radius: 0px;")
+"border-bottom-right-radius: 0px;\n"
+"font: 87 16pt \"Segoe UI Black\";")
         self.temp_day_1.setObjectName("temp_day_1")
         self.verticalLayout_2.addWidget(self.temp_day_1)
         self.horizontalLayout_4.addLayout(self.verticalLayout_2)
         self.verticalLayout_3.addLayout(self.horizontalLayout_4)
         self.weather_1 = QtWidgets.QLabel(parent=self.weathe_tomorrow)
         font = QtGui.QFont()
-        font.setPointSize(-1)
+        font.setFamily("Segoe UI Black")
+        font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(10)
         self.weather_1.setFont(font)
         self.weather_1.setStyleSheet("background: rgb(255, 255, 255, 0);\n"
 "max-height: 30px;\n"
 "color: rgb(255, 255, 255);\n"
 "font: 15px;\n"
-"")
+"font: 87 13pt \"Segoe UI Black\";")
         self.weather_1.setObjectName("weather_1")
         self.verticalLayout_3.addWidget(self.weather_1)
         self.verticalLayout_4.addLayout(self.verticalLayout_3)
@@ -248,20 +285,25 @@ class Ui_MainWindow(object):
 "border-top-right-radius: 0px;\n"
 "border-bottom-right-radius: 0px;\n"
 "max-height: 50px;\n"
-"font-size: 20px;\n"
-"font: bold;")
+"font: bold;\n"
+"font: 87 15pt \"Segoe UI Black\";")
         self.day_of_week_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.day_of_week_2.setObjectName("day_of_week_2")
         self.horizontalLayout_5.addWidget(self.day_of_week_2)
         self.date_2 = QtWidgets.QLabel(parent=self.widget_days_2)
         font = QtGui.QFont()
+        font.setFamily("Segoe UI Black")
         font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(10)
         self.date_2.setFont(font)
         self.date_2.setStyleSheet("background: rgb(255, 255, 255, 0.8);\n"
 "border-top-left-radius: 0px;\n"
 "border-bottom-left-radius: 0px;\n"
 "max-height: 40px;\n"
-"padding-bottom: 10px;")
+"padding-bottom: 10px;\n"
+"font: 87 10pt \"Segoe UI Black\";")
         self.date_2.setObjectName("date_2")
         self.horizontalLayout_5.addWidget(self.date_2)
         self.verticalLayout_6.addLayout(self.horizontalLayout_5)
@@ -283,27 +325,33 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.temp_day_2 = QtWidgets.QLabel(parent=self.widget_days_2)
         font = QtGui.QFont()
+        font.setFamily("Segoe UI Black")
         font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(10)
         self.temp_day_2.setFont(font)
         self.temp_day_2.setStyleSheet("background: rgb(255, 255, 255, 0.6);\n"
 "border-bottom-left-radius: 0px;\n"
-"border-bottom-right-radius: 0px;")
+"border-bottom-right-radius: 0px;\n"
+"font: 87 16pt \"Segoe UI Black\";")
         self.temp_day_2.setObjectName("temp_day_2")
         self.verticalLayout_5.addWidget(self.temp_day_2)
         self.horizontalLayout_6.addLayout(self.verticalLayout_5)
         self.verticalLayout_6.addLayout(self.horizontalLayout_6)
         self.weather_2 = QtWidgets.QLabel(parent=self.widget_days_2)
         font = QtGui.QFont()
-        font.setPointSize(-1)
+        font.setFamily("Segoe UI Black")
+        font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(10)
         self.weather_2.setFont(font)
         self.weather_2.setStyleSheet("background: rgb(255, 255, 255, 0);\n"
 "max-height: 30px;\n"
 "color: rgb(255, 255, 255);\n"
 "font: 15px;\n"
-"")
+"font: 87 13pt \"Segoe UI Black\";")
         self.weather_2.setObjectName("weather_2")
         self.verticalLayout_6.addWidget(self.weather_2)
         self.horizontalLayout_7.addLayout(self.verticalLayout_6)
@@ -331,19 +379,25 @@ class Ui_MainWindow(object):
 "border-bottom-right-radius: 0px;\n"
 "max-height: 50px;\n"
 "font-size: 20px;\n"
-"font: bold;")
+"font: bold;\n"
+"font: 87 15pt \"Segoe UI Black\";")
         self.day_of_week_3.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.day_of_week_3.setObjectName("day_of_week_3")
         self.horizontalLayout_8.addWidget(self.day_of_week_3)
         self.date_3 = QtWidgets.QLabel(parent=self.widget_days_3)
         font = QtGui.QFont()
+        font.setFamily("Segoe UI Black")
         font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(10)
         self.date_3.setFont(font)
         self.date_3.setStyleSheet("background: rgb(255, 255, 255, 0.8);\n"
 "border-top-left-radius: 0px;\n"
 "border-bottom-left-radius: 0px;\n"
 "max-height: 40px;\n"
-"padding-bottom: 10px;")
+"padding-bottom: 10px;\n"
+"font: 87 10pt \"Segoe UI Black\";")
         self.date_3.setObjectName("date_3")
         self.horizontalLayout_8.addWidget(self.date_3)
         self.verticalLayout_8.addLayout(self.horizontalLayout_8)
@@ -365,27 +419,33 @@ class Ui_MainWindow(object):
         self.verticalLayout_7.setObjectName("verticalLayout_7")
         self.temp_day_3 = QtWidgets.QLabel(parent=self.widget_days_3)
         font = QtGui.QFont()
+        font.setFamily("Segoe UI Black")
         font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(10)
         self.temp_day_3.setFont(font)
         self.temp_day_3.setStyleSheet("background: rgb(255, 255, 255, 0.6);\n"
 "border-bottom-left-radius: 0px;\n"
-"border-bottom-right-radius: 0px;")
+"border-bottom-right-radius: 0px;\n"
+"font: 87 16pt \"Segoe UI Black\";")
         self.temp_day_3.setObjectName("temp_day_3")
         self.verticalLayout_7.addWidget(self.temp_day_3)
         self.horizontalLayout_9.addLayout(self.verticalLayout_7)
         self.verticalLayout_8.addLayout(self.horizontalLayout_9)
         self.weather_3 = QtWidgets.QLabel(parent=self.widget_days_3)
         font = QtGui.QFont()
-        font.setPointSize(-1)
+        font.setFamily("Segoe UI Black")
+        font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(10)
         self.weather_3.setFont(font)
         self.weather_3.setStyleSheet("background: rgb(255, 255, 255, 0);\n"
 "max-height: 30px;\n"
 "color: rgb(255, 255, 255);\n"
 "font: 15px;\n"
-"")
+"font: 87 13pt \"Segoe UI Black\";")
         self.weather_3.setObjectName("weather_3")
         self.verticalLayout_8.addWidget(self.weather_3)
         self.verticalLayout_9.addLayout(self.verticalLayout_8)
@@ -413,19 +473,25 @@ class Ui_MainWindow(object):
 "border-bottom-right-radius: 0px;\n"
 "max-height: 50px;\n"
 "font-size: 20px;\n"
-"font: bold;")
+"font: bold;\n"
+"font: 87 15pt \"Segoe UI Black\";")
         self.day_of_week_4.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.day_of_week_4.setObjectName("day_of_week_4")
         self.horizontalLayout_10.addWidget(self.day_of_week_4)
         self.date_4 = QtWidgets.QLabel(parent=self.widget_days_4)
         font = QtGui.QFont()
+        font.setFamily("Segoe UI Black")
         font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(10)
         self.date_4.setFont(font)
         self.date_4.setStyleSheet("background: rgb(255, 255, 255, 0.8);\n"
 "border-top-left-radius: 0px;\n"
 "border-bottom-left-radius: 0px;\n"
 "max-height: 40px;\n"
-"padding-bottom: 10px;")
+"padding-bottom: 10px;\n"
+"font: 87 10pt \"Segoe UI Black\";")
         self.date_4.setObjectName("date_4")
         self.horizontalLayout_10.addWidget(self.date_4)
         self.verticalLayout_11.addLayout(self.horizontalLayout_10)
@@ -447,27 +513,33 @@ class Ui_MainWindow(object):
         self.verticalLayout_10.setObjectName("verticalLayout_10")
         self.temp_day_4 = QtWidgets.QLabel(parent=self.widget_days_4)
         font = QtGui.QFont()
+        font.setFamily("Segoe UI Black")
         font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(10)
         self.temp_day_4.setFont(font)
         self.temp_day_4.setStyleSheet("background: rgb(255, 255, 255, 0.6);\n"
 "border-bottom-left-radius: 0px;\n"
-"border-bottom-right-radius: 0px;")
+"border-bottom-right-radius: 0px;\n"
+"font: 87 16pt \"Segoe UI Black\";")
         self.temp_day_4.setObjectName("temp_day_4")
         self.verticalLayout_10.addWidget(self.temp_day_4)
         self.horizontalLayout_11.addLayout(self.verticalLayout_10)
         self.verticalLayout_11.addLayout(self.horizontalLayout_11)
         self.weather_4 = QtWidgets.QLabel(parent=self.widget_days_4)
         font = QtGui.QFont()
-        font.setPointSize(-1)
+        font.setFamily("Segoe UI Black")
+        font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(10)
         self.weather_4.setFont(font)
         self.weather_4.setStyleSheet("background: rgb(255, 255, 255, 0);\n"
 "max-height: 30px;\n"
 "color: rgb(255, 255, 255);\n"
 "font: 15px;\n"
-"")
+"font: 87 13pt \"Segoe UI Black\";")
         self.weather_4.setObjectName("weather_4")
         self.verticalLayout_11.addWidget(self.weather_4)
         self.horizontalLayout_12.addLayout(self.verticalLayout_11)
@@ -484,7 +556,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Weather"))
         self.city.setText(_translate("MainWindow", "Погода в Москве"))
         self.temp.setText(_translate("MainWindow", "+6*"))
         self.weather.setText(_translate("MainWindow", "Ясно"))

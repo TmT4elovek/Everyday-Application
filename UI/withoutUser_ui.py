@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'weather_withoutUser.ui'
+# Form implementation generated from reading ui file 'withoutUser.ui'
 #
 # Created by: PyQt6 UI code generator 6.7.1
 #
@@ -20,10 +20,15 @@ class Ui_MainWindow_WithoutUser(object):
         self.label = QtWidgets.QLabel(parent=self.centralwidget)
         self.label.setGeometry(QtCore.QRect(250, 200, 500, 200))
         font = QtGui.QFont()
+        font.setFamily("Segoe UI Black")
         font.setPointSize(32)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(10)
         self.label.setFont(font)
         self.label.setStyleSheet("background: rgb(115, 115, 173);\n"
-"border-radius: 8px;")
+"border-radius: 8px;\n"
+"font: 87 32pt \"Segoe UI Black\";")
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setObjectName("label")
         self.btn_home = QtWidgets.QPushButton(parent=self.centralwidget)
@@ -35,7 +40,9 @@ class Ui_MainWindow_WithoutUser(object):
 "border-color: rgb(190, 190, 213);\n"
 "border-radius: 8px;")
         self.btn_home.setText("")
-        self.btn_home.setIcon(QtGui.QIcon('items\icons\home.png'))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("../items/icons/home.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_home.setIcon(icon)
         self.btn_home.setIconSize(QtCore.QSize(50, 50))
         self.btn_home.setObjectName("btn_home")
         MainWindow.setCentralWidget(self.centralwidget)
@@ -47,10 +54,10 @@ class Ui_MainWindow_WithoutUser(object):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
 
-        self.retranslateUi_withoutUser(MainWindow)
+        self.retranslateUi_w(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    def retranslateUi_withoutUser(self, MainWindow):
+    def retranslateUi_w(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "weather"))
-        self.label.setText(_translate("MainWindow", "Войдите в аккаунт"))
+        self.label.setText(_translate("MainWindow", "Log in account"))

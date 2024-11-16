@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Log In</string>
   </property>
   <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
@@ -49,7 +49,7 @@
    <property name="styleSheet">
     <string notr="true">background: rgb(115, 115, 173);
 border-radius:6px;
-</string>
+font: 87 8pt &quot;Segoe UI Black&quot;;</string>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0">
     <property name="spacing">
@@ -78,6 +78,9 @@ border-radius:6px;
         <height>50</height>
        </size>
       </property>
+      <property name="styleSheet">
+       <string notr="true">font: 87 10pt &quot;Segoe UI Black&quot;;</string>
+      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -94,6 +97,12 @@ border-radius:6px;
        </item>
        <item>
         <widget class="QLineEdit" name="username_edit">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>17</height>
+          </size>
+         </property>
          <property name="styleSheet">
           <string notr="true">background: white;
 </string>
@@ -111,6 +120,9 @@ border-radius:6px;
         <height>50</height>
        </size>
       </property>
+      <property name="styleSheet">
+       <string notr="true">font: 87 10pt &quot;Segoe UI Black&quot;;</string>
+      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -121,12 +133,18 @@ border-radius:6px;
        <item alignment="Qt::AlignTop">
         <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>Enter password</string>
+          <string>Enter password:</string>
          </property>
         </widget>
        </item>
        <item alignment="Qt::AlignTop">
         <widget class="QLineEdit" name="password_edit">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>17</height>
+          </size>
+         </property>
          <property name="styleSheet">
           <string notr="true">background: white;</string>
          </property>
@@ -153,7 +171,8 @@ border-radius:6px;
        <item alignment="Qt::AlignTop">
         <widget class="QLabel" name="err_label">
          <property name="styleSheet">
-          <string notr="true">color: red;</string>
+          <string notr="true">color: red;
+font: 87 8pt &quot;Segoe UI Black&quot;;</string>
          </property>
          <property name="text">
           <string/>
@@ -162,12 +181,18 @@ border-radius:6px;
        </item>
        <item alignment="Qt::AlignTop">
         <widget class="QPushButton" name="btn_enter">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>20</height>
+          </size>
+         </property>
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
           <string notr="true">background:white;
-</string>
+font: 87 10pt &quot;Segoe UI Black&quot;;</string>
          </property>
          <property name="text">
           <string>Log in</string>
@@ -209,6 +234,12 @@ border-radius:6px;
        </property>
        <item>
         <widget class="QLabel" name="label_4">
+         <property name="minimumSize">
+          <size>
+           <width>83</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
            <width>75</width>
@@ -224,8 +255,8 @@ border-radius:6px;
         <widget class="QPushButton" name="btn_to_reg">
          <property name="minimumSize">
           <size>
-           <width>16</width>
-           <height>0</height>
+           <width>0</width>
+           <height>16</height>
           </size>
          </property>
          <property name="maximumSize">

@@ -37,15 +37,20 @@
     </property>
     <property name="font">
      <font>
+      <family>Segoe UI Black</family>
       <pointsize>32</pointsize>
+      <weight>10</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background: rgb(115, 115, 173);
-border-radius: 8px;</string>
+border-radius: 8px;
+font: 87 32pt &quot;Segoe UI Black&quot;;</string>
     </property>
     <property name="text">
-     <string>Войдите в аккаунт</string>
+     <string>Log in account</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>

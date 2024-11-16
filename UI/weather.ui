@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Weather</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -60,10 +60,11 @@ border: 4px solid rgb(190, 190, 213);</string>
                <widget class="QLabel" name="city">
                 <property name="font">
                  <font>
-                  <pointsize>-1</pointsize>
-                  <weight>75</weight>
+                  <family>Segoe UI Black</family>
+                  <pointsize>30</pointsize>
+                  <weight>10</weight>
                   <italic>false</italic>
-                  <bold>true</bold>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="styleSheet">
@@ -72,7 +73,8 @@ max-height: 50px;
 font-size: 30px;
 font: bold;
 border: 0px;
-padding-left: 20px;</string>
+padding-left: 20px;
+font: 87 30pt &quot;Segoe UI Black&quot;;</string>
                 </property>
                 <property name="text">
                  <string>Погода в Москве</string>
@@ -125,13 +127,18 @@ padding-left: 20px;</string>
                <widget class="QLabel" name="temp">
                 <property name="font">
                  <font>
+                  <family>Segoe UI Black</family>
                   <pointsize>26</pointsize>
+                  <weight>10</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">border: 0px;
 padding-left: 100px;
-color: rgb(113, 113, 170);</string>
+color: rgb(113, 113, 170);
+font: 87 26pt &quot;Segoe UI Black&quot;;</string>
                 </property>
                 <property name="text">
                  <string>+6*</string>
@@ -175,7 +182,8 @@ border-bottom-left-radius: 0px;
 border-bottom-right-radius: 0px;
 border: 0px;
 padding-left: 20px;
-font: 20px;</string>
+font: 20px;
+font: 87 20pt &quot;Segoe UI Black&quot;;</string>
                   </property>
                   <property name="text">
                    <string>Ясно</string>
@@ -190,7 +198,8 @@ border-top-left-radius: 0px;
 border-top-right-radius: 0px;
 border: 0px;
 padding-left: 20px;
-font: 15px;</string>
+font: 15px;
+font: 87 15pt &quot;Segoe UI Black&quot;;</string>
                   </property>
                   <property name="text">
                    <string>Ощущается как +3*</string>
@@ -213,12 +222,17 @@ font: 15px;</string>
                <widget class="QLabel" name="wind">
                 <property name="font">
                  <font>
+                  <family>Segoe UI Black</family>
                   <pointsize>14</pointsize>
+                  <weight>10</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">border: 0px;
-padding-left: 20px;</string>
+padding-left: 20px;
+font: 87 14pt &quot;Segoe UI Black&quot;;</string>
                 </property>
                 <property name="text">
                  <string>2,5 мс, СВ</string>
@@ -229,11 +243,16 @@ padding-left: 20px;</string>
                <widget class="QLabel" name="humidity">
                 <property name="font">
                  <font>
+                  <family>Segoe UI Black</family>
                   <pointsize>14</pointsize>
+                  <weight>10</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border: 0px;</string>
+                 <string notr="true">border: 0px;
+font: 87 14pt &quot;Segoe UI Black&quot;;</string>
                 </property>
                 <property name="text">
                  <string>76%</string>
@@ -244,11 +263,16 @@ padding-left: 20px;</string>
                <widget class="QLabel" name="pressure">
                 <property name="font">
                  <font>
+                  <family>Segoe UI Black</family>
                   <pointsize>14</pointsize>
+                  <weight>10</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border: 0px;</string>
+                 <string notr="true">border: 0px;
+font: 87 14pt &quot;Segoe UI Black&quot;;</string>
                 </property>
                 <property name="text">
                  <string>750 мм рт. ст.</string>
@@ -279,22 +303,25 @@ background: rgba(115, 115, 173, 0.4);
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_4">
            <property name="spacing">
-            <number>0</number>
+            <number>6</number>
            </property>
            <property name="leftMargin">
-            <number>0</number>
+            <number>9</number>
            </property>
            <property name="topMargin">
-            <number>0</number>
+            <number>9</number>
            </property>
            <property name="rightMargin">
-            <number>0</number>
+            <number>9</number>
            </property>
            <property name="bottomMargin">
-            <number>0</number>
+            <number>9</number>
            </property>
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_3">
+             <property name="spacing">
+              <number>0</number>
+             </property>
              <property name="bottomMargin">
               <number>70</number>
              </property>
@@ -311,7 +338,8 @@ border-top-right-radius: 0px;
 border-bottom-right-radius: 0px;
 max-height: 50px;
 font-size: 20px;
-font: bold;</string>
+font: bold;
+font: 87 15pt &quot;Segoe UI Black&quot;;</string>
                  </property>
                  <property name="text">
                   <string>Вторник</string>
@@ -325,7 +353,11 @@ font: bold;</string>
                 <widget class="QLabel" name="date_1">
                  <property name="font">
                   <font>
+                   <family>Segoe UI Black</family>
                    <pointsize>10</pointsize>
+                   <weight>10</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -333,7 +365,8 @@ font: bold;</string>
 border-top-left-radius: 0px;
 border-bottom-left-radius: 0px;
 max-height: 40px;
-padding-bottom: 10px;</string>
+padding-bottom: 10px;
+font: 87 10pt &quot;Segoe UI Black&quot;;</string>
                  </property>
                  <property name="text">
                   <string>29 окт</string>
@@ -374,13 +407,18 @@ padding-bottom: 10px;</string>
                   <widget class="QLabel" name="temp_day_1">
                    <property name="font">
                     <font>
+                     <family>Segoe UI Black</family>
                      <pointsize>16</pointsize>
+                     <weight>10</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">background: rgb(255, 255, 255, 0.6);
 border-bottom-left-radius: 0px;
-border-bottom-right-radius: 0px;</string>
+border-bottom-right-radius: 0px;
+font: 87 16pt &quot;Segoe UI Black&quot;;</string>
                    </property>
                    <property name="text">
                     <string>+6*</string>
@@ -395,8 +433,9 @@ border-bottom-right-radius: 0px;</string>
               <widget class="QLabel" name="weather_1">
                <property name="font">
                 <font>
-                 <pointsize>-1</pointsize>
-                 <weight>50</weight>
+                 <family>Segoe UI Black</family>
+                 <pointsize>13</pointsize>
+                 <weight>10</weight>
                  <italic>false</italic>
                  <bold>false</bold>
                 </font>
@@ -406,7 +445,7 @@ border-bottom-right-radius: 0px;</string>
 max-height: 30px;
 color: rgb(255, 255, 255);
 font: 15px;
-</string>
+font: 87 13pt &quot;Segoe UI Black&quot;;</string>
                </property>
                <property name="text">
                 <string>Малооблачно</string>
@@ -451,8 +490,8 @@ background: rgba(115, 115, 173, 0.6);
 border-top-right-radius: 0px;
 border-bottom-right-radius: 0px;
 max-height: 50px;
-font-size: 20px;
-font: bold;</string>
+font: bold;
+font: 87 15pt &quot;Segoe UI Black&quot;;</string>
                  </property>
                  <property name="text">
                   <string>Среда</string>
@@ -466,7 +505,11 @@ font: bold;</string>
                 <widget class="QLabel" name="date_2">
                  <property name="font">
                   <font>
+                   <family>Segoe UI Black</family>
                    <pointsize>10</pointsize>
+                   <weight>10</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -474,7 +517,8 @@ font: bold;</string>
 border-top-left-radius: 0px;
 border-bottom-left-radius: 0px;
 max-height: 40px;
-padding-bottom: 10px;</string>
+padding-bottom: 10px;
+font: 87 10pt &quot;Segoe UI Black&quot;;</string>
                  </property>
                  <property name="text">
                   <string>30 окт</string>
@@ -518,13 +562,18 @@ padding-bottom: 10px;</string>
                   <widget class="QLabel" name="temp_day_2">
                    <property name="font">
                     <font>
+                     <family>Segoe UI Black</family>
                      <pointsize>16</pointsize>
+                     <weight>10</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">background: rgb(255, 255, 255, 0.6);
 border-bottom-left-radius: 0px;
-border-bottom-right-radius: 0px;</string>
+border-bottom-right-radius: 0px;
+font: 87 16pt &quot;Segoe UI Black&quot;;</string>
                    </property>
                    <property name="text">
                     <string>+8*</string>
@@ -539,8 +588,9 @@ border-bottom-right-radius: 0px;</string>
               <widget class="QLabel" name="weather_2">
                <property name="font">
                 <font>
-                 <pointsize>-1</pointsize>
-                 <weight>50</weight>
+                 <family>Segoe UI Black</family>
+                 <pointsize>13</pointsize>
+                 <weight>10</weight>
                  <italic>false</italic>
                  <bold>false</bold>
                 </font>
@@ -550,7 +600,7 @@ border-bottom-right-radius: 0px;</string>
 max-height: 30px;
 color: rgb(255, 255, 255);
 font: 15px;
-</string>
+font: 87 13pt &quot;Segoe UI Black&quot;;</string>
                </property>
                <property name="text">
                 <string>Малооблачно</string>
@@ -596,7 +646,8 @@ border-top-right-radius: 0px;
 border-bottom-right-radius: 0px;
 max-height: 50px;
 font-size: 20px;
-font: bold;</string>
+font: bold;
+font: 87 15pt &quot;Segoe UI Black&quot;;</string>
                  </property>
                  <property name="text">
                   <string>Четверг</string>
@@ -610,7 +661,11 @@ font: bold;</string>
                 <widget class="QLabel" name="date_3">
                  <property name="font">
                   <font>
+                   <family>Segoe UI Black</family>
                    <pointsize>10</pointsize>
+                   <weight>10</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -618,7 +673,8 @@ font: bold;</string>
 border-top-left-radius: 0px;
 border-bottom-left-radius: 0px;
 max-height: 40px;
-padding-bottom: 10px;</string>
+padding-bottom: 10px;
+font: 87 10pt &quot;Segoe UI Black&quot;;</string>
                  </property>
                  <property name="text">
                   <string>31 окт</string>
@@ -662,13 +718,18 @@ padding-bottom: 10px;</string>
                   <widget class="QLabel" name="temp_day_3">
                    <property name="font">
                     <font>
+                     <family>Segoe UI Black</family>
                      <pointsize>16</pointsize>
+                     <weight>10</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">background: rgb(255, 255, 255, 0.6);
 border-bottom-left-radius: 0px;
-border-bottom-right-radius: 0px;</string>
+border-bottom-right-radius: 0px;
+font: 87 16pt &quot;Segoe UI Black&quot;;</string>
                    </property>
                    <property name="text">
                     <string>+6*</string>
@@ -683,8 +744,9 @@ border-bottom-right-radius: 0px;</string>
               <widget class="QLabel" name="weather_3">
                <property name="font">
                 <font>
-                 <pointsize>-1</pointsize>
-                 <weight>50</weight>
+                 <family>Segoe UI Black</family>
+                 <pointsize>13</pointsize>
+                 <weight>10</weight>
                  <italic>false</italic>
                  <bold>false</bold>
                 </font>
@@ -694,7 +756,7 @@ border-bottom-right-radius: 0px;</string>
 max-height: 30px;
 color: rgb(255, 255, 255);
 font: 15px;
-</string>
+font: 87 13pt &quot;Segoe UI Black&quot;;</string>
                </property>
                <property name="text">
                 <string>Малооблачно</string>
@@ -740,7 +802,8 @@ border-top-right-radius: 0px;
 border-bottom-right-radius: 0px;
 max-height: 50px;
 font-size: 20px;
-font: bold;</string>
+font: bold;
+font: 87 15pt &quot;Segoe UI Black&quot;;</string>
                  </property>
                  <property name="text">
                   <string>Пятница</string>
@@ -754,7 +817,11 @@ font: bold;</string>
                 <widget class="QLabel" name="date_4">
                  <property name="font">
                   <font>
+                   <family>Segoe UI Black</family>
                    <pointsize>10</pointsize>
+                   <weight>10</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -762,7 +829,8 @@ font: bold;</string>
 border-top-left-radius: 0px;
 border-bottom-left-radius: 0px;
 max-height: 40px;
-padding-bottom: 10px;</string>
+padding-bottom: 10px;
+font: 87 10pt &quot;Segoe UI Black&quot;;</string>
                  </property>
                  <property name="text">
                   <string>1 ноя</string>
@@ -806,13 +874,18 @@ padding-bottom: 10px;</string>
                   <widget class="QLabel" name="temp_day_4">
                    <property name="font">
                     <font>
+                     <family>Segoe UI Black</family>
                      <pointsize>16</pointsize>
+                     <weight>10</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">background: rgb(255, 255, 255, 0.6);
 border-bottom-left-radius: 0px;
-border-bottom-right-radius: 0px;</string>
+border-bottom-right-radius: 0px;
+font: 87 16pt &quot;Segoe UI Black&quot;;</string>
                    </property>
                    <property name="text">
                     <string>+6*</string>
@@ -827,8 +900,9 @@ border-bottom-right-radius: 0px;</string>
               <widget class="QLabel" name="weather_4">
                <property name="font">
                 <font>
-                 <pointsize>-1</pointsize>
-                 <weight>50</weight>
+                 <family>Segoe UI Black</family>
+                 <pointsize>13</pointsize>
+                 <weight>10</weight>
                  <italic>false</italic>
                  <bold>false</bold>
                 </font>
@@ -838,7 +912,7 @@ border-bottom-right-radius: 0px;</string>
 max-height: 30px;
 color: rgb(255, 255, 255);
 font: 15px;
-</string>
+font: 87 13pt &quot;Segoe UI Black&quot;;</string>
                </property>
                <property name="text">
                 <string>Малооблачно</string>

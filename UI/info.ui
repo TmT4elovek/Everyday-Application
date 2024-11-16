@@ -102,8 +102,15 @@
            <widget class="QLabel" name="label">
             <property name="font">
              <font>
+              <family>Segoe UI Black</family>
               <pointsize>10</pointsize>
+              <weight>10</weight>
+              <italic>false</italic>
+              <bold>false</bold>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 87 10pt &quot;Segoe UI Black&quot;;</string>
             </property>
             <property name="text">
              <string>Event name:</string>
@@ -114,11 +121,16 @@
            <widget class="QLineEdit" name="event_edit">
             <property name="font">
              <font>
+              <family>Segoe UI Black</family>
               <pointsize>10</pointsize>
+              <weight>10</weight>
+              <italic>false</italic>
+              <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">border-radius: 8px;</string>
+             <string notr="true">border-radius: 8px;
+font: 87 10pt &quot;Segoe UI Black&quot;;</string>
             </property>
             <property name="maxLength">
              <number>60</number>
@@ -204,8 +216,15 @@
                  <widget class="QLabel" name="label_2">
                   <property name="font">
                    <font>
+                    <family>Segoe UI Black</family>
                     <pointsize>10</pointsize>
+                    <weight>10</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
                    </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">font: 87 10pt &quot;Segoe UI Black&quot;;</string>
                   </property>
                   <property name="text">
                    <string>Event date:</string>
@@ -216,11 +235,16 @@
                  <widget class="QDateEdit" name="dateEdit">
                   <property name="font">
                    <font>
+                    <family>Segoe UI Black</family>
                     <pointsize>10</pointsize>
+                    <weight>10</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">border-radius: 8px;</string>
+                   <string notr="true">border-radius: 8px;
+font: 87 10pt &quot;Segoe UI Black&quot;;</string>
                   </property>
                  </widget>
                 </item>
@@ -292,8 +316,15 @@
                  <widget class="QLabel" name="label_3">
                   <property name="font">
                    <font>
+                    <family>Segoe UI Black</family>
                     <pointsize>10</pointsize>
+                    <weight>10</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
                    </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">font: 87 10pt &quot;Segoe UI Black&quot;;</string>
                   </property>
                   <property name="text">
                    <string>Event time:</string>
@@ -304,11 +335,16 @@
                  <widget class="QTimeEdit" name="timeEdit">
                   <property name="font">
                    <font>
+                    <family>Segoe UI Black</family>
                     <pointsize>10</pointsize>
+                    <weight>10</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">border-radius: 8px;</string>
+                   <string notr="true">border-radius: 8px;
+font: 87 10pt &quot;Segoe UI Black&quot;;</string>
                   </property>
                  </widget>
                 </item>
@@ -353,8 +389,15 @@
         <widget class="QLabel" name="label_4">
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <family>Segoe UI Black</family>
+           <pointsize>11</pointsize>
+           <weight>10</weight>
+           <italic>false</italic>
+           <bold>false</bold>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 87 11pt &quot;Segoe UI Black&quot;;</string>
          </property>
          <property name="text">
           <string>You can change info about this event if you want</string>
@@ -369,6 +412,9 @@
     </item>
     <item alignment="Qt::AlignTop">
      <widget class="QFrame" name="frame_12">
+      <property name="styleSheet">
+       <string notr="true">font: 87 8pt &quot;Segoe UI Black&quot;;</string>
+      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>

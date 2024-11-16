@@ -51,13 +51,10 @@ class InfoDialog(QDialog, Ui_Dialog):
             self.data['title'] = self.event_edit.text()
             self.data['date'] = date
             self.data['date_unix'] = datetime.datetime.timestamp(self.data['date'])
-        print(self.data)
         self.accept()
     
     def cancel(self) -> None:
         if self.confirm("Save changes?"):
-            print(self.data)
             self.save()
         else:
-            print(self.data)
             self.accept()

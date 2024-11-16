@@ -33,9 +33,9 @@ class Weather(QMainWindow, Ui_MainWindow, Ui_MainWindow_WithoutUser):
             self.setupUi_withoutUser(self)
         # btn back to main connect
         self.btn_home.pressed.connect(self.to_home)
+        self.btn_home.setIcon(QIcon("items\icons\home.png"))
 
     def initUI(self) -> None:
-        self.btn_home.setIcon(QIcon("items\icons\home.png"))
 
         self.weekdays = {
             0: 'Monday',
@@ -151,6 +151,8 @@ class Weather(QMainWindow, Ui_MainWindow, Ui_MainWindow_WithoutUser):
             
             if day not in [datetime.datetime.utcfromtimestamp(x['dt']).day for x in self.dates]:
                 self.dates.append(data['list'][i])
+        
+        self.home_window.today_weather_icon = self.dates[0]['weather'][0]['icon']
 
     def get_user_city(self, user) -> tuple:
         # get user city from database
