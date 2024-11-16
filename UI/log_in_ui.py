@@ -94,6 +94,7 @@ class Ui_Dialog(object):
         self.btn_to_reg = QtWidgets.QPushButton(parent=self.frame_4)
         self.btn_to_reg.setMinimumSize(QtCore.QSize(16, 0))
         self.btn_to_reg.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.btn_to_reg.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_to_reg.setStyleSheet("background: white;")
         self.btn_to_reg.setObjectName("btn_to_reg")
         self.horizontalLayout.addWidget(self.btn_to_reg)
@@ -105,8 +106,8 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.label.setText(_translate("Dialog", "Введите имя пользователя:"))
-        self.label_3.setText(_translate("Dialog", "Введите пароль:"))
-        self.btn_enter.setText(_translate("Dialog", "Войти"))
+        self.label.setText(_translate("Dialog", "Enter username:"))
+        self.label_3.setText(_translate("Dialog", "Enter password"))
+        self.btn_enter.setText(_translate("Dialog", "Log in"))
         self.label_4.setText(_translate("Dialog", "Нет аккаунта?"))
-        self.btn_to_reg.setText(_translate("Dialog", "Регистрация"))
+        self.btn_to_reg.setText(_translate("Dialog", "Sign in"))

@@ -77,7 +77,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Календарь</string>
+     <string>Calendar</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_to_weather">
@@ -95,7 +95,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Погода</string>
+     <string>Weather</string>
     </property>
    </widget>
    <widget class="QFrame" name="frame">

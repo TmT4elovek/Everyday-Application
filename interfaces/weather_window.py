@@ -18,12 +18,17 @@ class Weather(QMainWindow, Ui_MainWindow, Ui_MainWindow_WithoutUser):
         # Save the home window reference
         self.home_window = home_window
         if self.home_window.get_user():
-            #Api request
-            self.get_response()
+            try:
+                #Api request
+                self.get_response()
 
-            # Load the UI file
-            self.setupUi(self)
-            self.initUI()
+                # Load the UI file
+                self.setupUi(self)
+                self.initUI()
+            except requests.exceptions.ConnectTimeout:
+                print('Api no response. Try to use VPN')
+                home_window.log_out()
+            # except requests.exceptions.
         else:
             self.setupUi_withoutUser(self)
         # btn back to main connect
@@ -133,7 +138,7 @@ class Weather(QMainWindow, Ui_MainWindow, Ui_MainWindow_WithoutUser):
         lon = city[4]
 
         # API request
-        response = requests.get(f'https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API_KEY}&units=metric', stream=True)
+        response = requests.get(f'https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API_KEY}&units=metric', stream=True, timeout=10)
         response.raise_for_status()
         data = response.json()
         self.dates = list()

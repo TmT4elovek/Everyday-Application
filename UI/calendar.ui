@@ -241,7 +241,7 @@ border-radius: 6px;
 </string>
           </property>
           <property name="text">
-           <string>Добавить</string>
+           <string>Add event</string>
           </property>
          </widget>
         </item>
@@ -292,7 +292,7 @@ border-radius: 6px;
               <string/>
              </property>
              <property name="maxLength">
-              <number>70</number>
+              <number>60</number>
              </property>
             </widget>
            </item>
@@ -424,7 +424,7 @@ border: None;
 border-radius: 6px;</string>
              </property>
              <property name="text">
-              <string>Информация</string>
+              <string>Information</string>
              </property>
             </widget>
            </item>
@@ -448,7 +448,7 @@ border: None;
 border-radius: 6px;</string>
              </property>
              <property name="text">
-              <string>Удалить</string>
+              <string>Delete</string>
              </property>
             </widget>
            </item>

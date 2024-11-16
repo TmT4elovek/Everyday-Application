@@ -84,6 +84,6 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Main window"))
         self.clock.setText(_translate("MainWindow", "12:00"))
-        self.btn_to_calendar.setText(_translate("MainWindow", "Календарь"))
-        self.btn_to_weather.setText(_translate("MainWindow", "Погода"))
+        self.btn_to_calendar.setText(_translate("MainWindow", "Calendar"))
+        self.btn_to_weather.setText(_translate("MainWindow", "Weather"))
         self.btn_register.setText(_translate("MainWindow", "Sign up"))

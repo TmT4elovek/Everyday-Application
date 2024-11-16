@@ -1,4 +1,3 @@
-f = {1: 'f', 'm': 2}
-print(f)
-del f['m']
-print(f)
+f = '1111                   3333              111111'
+
+print(f.split(maxsplit=1))
