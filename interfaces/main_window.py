@@ -1,7 +1,6 @@
 from PyQt6.QtWidgets import QMainWindow
-from PyQt6.QtCore import QCoreApplication, QThread
+from PyQt6.QtCore import QCoreApplication, QThread, Qt
 from PyQt6.QtGui import QIcon
-
 import datetime
 import time
 
@@ -94,7 +93,7 @@ class Main(QMainWindow, Ui_MainWindow):
 
             self.weather_window.__init__(self)
             self.calendar_window.__init__(self)
-            self.btn_to_weather.setIcon(QIcon(f'items\weather_icons\{self.today_weather_icon}.png'))
+            self.btn_to_weather.setIcon(QIcon(''))
         
     def log_out(self) -> None:
         self._user = ()

@@ -47,6 +47,7 @@ class InfoDialog(QDialog, Ui_Dialog):
             self.timeEdit.time().hour(), 
             self.dateEdit.time().minute()
         )
+
         if self.title != self.event_edit.text() or self.date != date:
             self.data['title'] = self.event_edit.text()
             self.data['date'] = date

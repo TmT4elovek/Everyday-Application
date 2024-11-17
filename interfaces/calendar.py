@@ -11,10 +11,10 @@ from interfaces.dialogs.info import InfoDialog
 
 
 class Calendar(QMainWindow, Ui_MainWindow, Ui_MainWindow_WithoutUser):
-    def __init__(self, home_window: object) -> None:
-        super().__init__(home_window)
+    def __init__(self, parent: object) -> None:
+        super().__init__()
         # Save the home window reference
-        self.home_window = home_window
+        self.home_window = parent
 
         if self.home_window.get_user():
             # Load the UI file
@@ -34,7 +34,7 @@ class Calendar(QMainWindow, Ui_MainWindow, Ui_MainWindow_WithoutUser):
         self.update_events_list()
 
         # If any item is selected turn on btns
-        self.events_list.itemClicked.connect(self.turn_on_btns)
+        self.events_list.itemSelectionChanged.connect(self.turn_btns)
 
         self.btn_delete.pressed.connect(self.delete_item)
         self.btn_info.pressed.connect(self.info_ab_item)
@@ -107,17 +107,23 @@ class Calendar(QMainWindow, Ui_MainWindow, Ui_MainWindow_WithoutUser):
 
         self.events_list.addItems(events)
 
-    def turn_on_btns(self) -> None:
-        if not (self.btn_info.isEnabled() and self.btn_delete.isEnabled()):
+    def turn_btns(self) -> None:
+        if self.events_list.selectedItems():
             self.btn_info.setEnabled(True)
             self.btn_info.setStyleSheet('background: rgb(115, 115, 173);\\n\nborder: None;\nborder-radius: 6px;')
             self.btn_delete.setEnabled(True)
             self.btn_delete.setStyleSheet('background: rgb(115, 115, 173);\\n\nborder: None;\nborder-radius: 6px;')
+        else:
+            self.btn_info.setEnabled(False)
+            self.btn_info.setStyleSheet('background: rgba(115, 115, 173, 0.3);\\n\nborder: None;\nborder-radius: 6px;')
+            self.btn_delete.setEnabled(False)
+            self.btn_delete.setStyleSheet('background: rgba(115, 115, 173, 0.3);\\n\nborder: None;\nborder-radius: 6px;')
 
     def delete_item(self) -> None:
         if self.confirm('Are you sure you want to delete?'):
             selected_item = self.events_list.selectedItems()[0].text()
-            selected_item = selected_item.split(maxsplit=1)
+            date = selected_item[-16:]
+            title = selected_item[:-16].rstrip()
 
             #! connect to db
             conn = sqlite3.connect('databases/database.db')
@@ -127,7 +133,7 @@ class Calendar(QMainWindow, Ui_MainWindow, Ui_MainWindow_WithoutUser):
                 '''
                     DELETE FROM user_events
                     WHERE user_id = ? AND title = ? AND date = ?
-                ''', (self.home_window.get_user()[0], selected_item[0], selected_item[1])
+                ''', (self.home_window.get_user()[0], title, date)
             )
 
             conn.commit()
@@ -150,9 +156,8 @@ class Calendar(QMainWindow, Ui_MainWindow, Ui_MainWindow_WithoutUser):
     
     def info_ab_item(self) -> None:
         selected_item = self.events_list.selectedItems()[0].text()
-        selected_item = selected_item.split(maxsplit=1)
-        title = selected_item[0]
-        date = datetime.datetime.strptime(selected_item[1], '%Y-%m-%d %H:%M')
+        title = selected_item[:-16].rstrip()
+        date = datetime.datetime.strptime(selected_item[-16:], '%Y-%m-%d %H:%M')
 
         info_dialog = InfoDialog(title, date, self)
         if info_dialog.exec():
@@ -160,7 +165,7 @@ class Calendar(QMainWindow, Ui_MainWindow, Ui_MainWindow_WithoutUser):
             if info_dialog.data:
                 self.update_event_in_db(self.home_window.get_user()[0],
                                         title, info_dialog.data['title'], 
-                                        info_dialog.data['date'], 
+                                        info_dialog.data['date'].strftime('%Y-%m-%d %H:%M'), 
                                         datetime.datetime.timestamp(date), 
                                         info_dialog.data['date_unix']
                                         )

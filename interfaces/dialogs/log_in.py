@@ -6,14 +6,14 @@ from UI.log_in_ui import Ui_Dialog
 
 
 class LogIn(QDialog, Ui_Dialog):
-    def __init__(self, MainWindow: object):
-        super().__init__(MainWindow)
+    def __init__(self, parent: object):
+        super().__init__(parent=parent)
 
         self.setupUi(self)
         self.initUI()
         self.setModal(True)  # Make the dialog modal, so it blocks the main window until it's closed
 
-        self.main_w = MainWindow
+        self.main_w = parent
     
     def initUI(self) -> None:
         self.btn_to_reg.pressed.connect(self.to_reg)
@@ -40,7 +40,7 @@ class LogIn(QDialog, Ui_Dialog):
             ''', (username, password)).fetchone()
         
         if not user:
-            self.err_label.setText('Неверное имя пользователя или пароль!')
+            self.err_label.setText('Invalid username or password!')
             self.username_edit.clear()
             self.password_edit.clear()
             return

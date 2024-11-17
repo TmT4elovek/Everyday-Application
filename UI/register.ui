@@ -121,7 +121,7 @@ border-radius: 6px;\n
              </font>
             </property>
             <property name="text">
-             <string>Введите Имя пользователя:</string>
+             <string>Enter username:</string>
             </property>
            </widget>
           </item>
@@ -163,7 +163,7 @@ border-radius:6px</string>
              </font>
             </property>
             <property name="text">
-             <string>Введите пароль:</string>
+             <string>Enter password:</string>
             </property>
            </widget>
           </item>
@@ -214,7 +214,7 @@ border-radius:6px</string>
              </font>
             </property>
             <property name="text">
-             <string>Повторите пароль:</string>
+             <string>Repeat password:</string>
             </property>
            </widget>
           </item>
@@ -277,7 +277,7 @@ border-radius:6px</string>
              </font>
             </property>
             <property name="text">
-             <string>Выберите страну:</string>
+             <string>Choose country:</string>
             </property>
            </widget>
           </item>
@@ -328,7 +328,7 @@ border-radius:6px</string>
              </font>
             </property>
             <property name="text">
-             <string>Выберите город:</string>
+             <string>Choose city:</string>
             </property>
            </widget>
           </item>
@@ -409,7 +409,7 @@ border-radius:6px;
 font: 87 10pt &quot;Segoe UI Black&quot;;</string>
                </property>
                <property name="text">
-                <string>Зарегистрироватся</string>
+                <string>Sign up</string>
                </property>
               </widget>
              </item>
@@ -431,7 +431,7 @@ font: 87 10pt &quot;Segoe UI Black&quot;;</string>
              <item alignment="Qt::AlignRight|Qt::AlignBottom">
               <widget class="QLabel" name="label_6">
                <property name="text">
-                <string>Есть аккаунт?</string>
+                <string>Have an acc?</string>
                </property>
               </widget>
              </item>
@@ -451,7 +451,7 @@ font: 87 10pt &quot;Segoe UI Black&quot;;</string>
 border-radius:6px</string>
                </property>
                <property name="text">
-                <string>Войти</string>
+                <string>Log in</string>
                </property>
               </widget>
              </item>

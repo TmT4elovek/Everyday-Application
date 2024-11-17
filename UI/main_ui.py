@@ -87,7 +87,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.clock = QtWidgets.QLabel(parent=self.frame_3)
         self.clock.setMinimumSize(QtCore.QSize(340, 160))
-        self.clock.setMaximumSize(QtCore.QSize(340, 160))
+        self.clock.setMaximumSize(QtCore.QSize(400, 160))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Black")
         font.setPointSize(100)

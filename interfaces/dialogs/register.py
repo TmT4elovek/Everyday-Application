@@ -6,14 +6,14 @@ from UI.register_ui import Ui_Dialog
 
 
 class Register(QDialog, Ui_Dialog):
-    def __init__(self, MainWindow: object) -> None:
-        super().__init__(MainWindow)
+    def __init__(self, parent: object) -> None:
+        super().__init__(parent=parent)
 
         self.setupUi(self)
         self.initUI()
         self.setModal(True) # Make the dialog modal, so it blocks the main window until it's closed
 
-        self.main_w = MainWindow
+        self.main_w = parent
 
     def initUI(self) -> None:
         # Get from bd countries

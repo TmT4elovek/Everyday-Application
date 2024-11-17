@@ -196,7 +196,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;</string>
           </property>
           <property name="maximumSize">
            <size>
-            <width>340</width>
+            <width>400</width>
             <height>160</height>
            </size>
           </property>

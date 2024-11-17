@@ -3,7 +3,7 @@ import datetime
 
 import sqlite3
 
-from PyQt6.QtWidgets import QMainWindow
+from PyQt6.QtWidgets import QMainWindow, QMessageBox
 from PyQt6.QtCore import QCoreApplication
 from PyQt6.QtGui import QIcon, QImage, QPixmap
 
@@ -12,11 +12,11 @@ from UI.withoutUser_ui import Ui_MainWindow_WithoutUser
 from SECRET import API_KEY
 
 class Weather(QMainWindow, Ui_MainWindow, Ui_MainWindow_WithoutUser):
-    def __init__(self, home_window: object) -> None:
-        super().__init__(home_window)
+    def __init__(self, parent: object) -> None:
+        super().__init__()
 
         # Save the home window reference
-        self.home_window = home_window
+        self.home_window = parent
         if self.home_window.get_user():
             try:
                 #Api request
@@ -27,8 +27,12 @@ class Weather(QMainWindow, Ui_MainWindow, Ui_MainWindow_WithoutUser):
                 self.initUI()
             except requests.exceptions.ConnectTimeout:
                 print('Api no response. Try to use VPN')
-                home_window.log_out()
-            # except requests.exceptions.
+                QMessageBox.warning(self, 'Connection error', 'Api no response. Try to use VPN', buttons=QMessageBox.StandardButton.Ok)
+                self.home_window.log_out()
+            except requests.exceptions.ReadTimeout:
+                print('Api request timeout. Try again later')
+                QMessageBox.warning(self, 'Connection error', 'Api request timeout. Try again later', buttons=QMessageBox.StandardButton.Ok)
+                self.home_window.log_out()
         else:
             self.setupUi_withoutUser(self)
         # btn back to main connect
@@ -138,7 +142,7 @@ class Weather(QMainWindow, Ui_MainWindow, Ui_MainWindow_WithoutUser):
         lon = city[4]
 
         # API request
-        response = requests.get(f'https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API_KEY}&units=metric', stream=True, timeout=10)
+        response = requests.get(f'https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API_KEY}&units=metric', stream=True)
         response.raise_for_status()
         data = response.json()
         self.dates = list()
